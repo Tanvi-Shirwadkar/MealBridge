@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate Food - Meal Bridge</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    :root {
+      --primary-color: #16a085;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .donate-container {
+      max-width: 500px;
+      margin: 80px auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .form-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: var(--primary-color);
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .form-label {
+      font-weight: 500;
+      color: #333;
+    }
+
+    .form-check-label {
+      margin-left: 8px;
+    }
+
+    .btn-primary {
+      background-color: var(--primary-color);
+      border: none;
+      width: 100%;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: 500;
+      border-radius: 8px;
+    }
+
+    .btn-primary:hover {
+      background-color: #138d75;
+    }
+
+    .form-text {
+      font-size: 0.875rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="./index.html">Meal Bridge</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item mx-3">
+            <a class="nav-link active" href="./aboutus.html">About Us</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active" href="./login.html">Login/Sign Up</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active" href="./donatefood.html">Donate Food</a>
+          </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link active" href="./findmeals.html">Find Meals</a>
+          </li>
+          
+          <li class="nav-item mx-3">
+            <a class="nav-link active" href="./contactus.html">Contact Us</a>
+          </li>
+         
+        </ul>
+
+      
+      </div>
+    </div>
+  </nav>
+    
+
+  <div class="donate-container">
+    <div class="form-title">Donate Food</div>
+    <form>
+      <div class="mb-3">
+        <label for="restaurantName" class="form-label">Restaurant Name</label>
+        <input type="text" class="form-control" id="restaurantName" placeholder="Enter restaurant name" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="restaurantAddress" class="form-label">Address</label>
+        <textarea class="form-control" id="restaurantAddress" rows="2" placeholder="Enter full address" required></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label for="pincode" class="form-label">Pincode</label>
+        <input type="text" class="form-control" id="pincode" placeholder="Enter pincode" required>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Type of Food</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="foodType" id="veg" value="Veg" required>
+          <label class="form-check-label" for="veg">Veg</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="foodType" id="nonveg" value="Non-Veg">
+          <label class="form-check-label" for="nonveg">Non-Veg</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="foodType" id="both" value="Both">
+          <label class="form-check-label" for="both">Both</label>
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label for="expiryDuration" class="form-label">Best Before (in hours)</label>
+        <input type="number" class="form-control" id="expiryDuration" placeholder="e.g., 5 hours" min="1" required>
+        <div class="form-text">Indicate how long the food will remain consumable.</div>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Submit Donation</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
